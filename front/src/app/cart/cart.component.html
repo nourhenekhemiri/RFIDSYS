@@ -1,0 +1,45 @@
+<br><br><br><br><br><br><br><br><br>
+
+
+
+<section class="cart_section">
+  <div class="container">
+    <h2>Cart</h2>
+    <div>
+      <table class="table table-hover">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">#</th>
+            <th scope="col">Image</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Quantite</th>
+            <th scope="col">Totale</th>
+            <th scope="col">Supprimer</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let getCartDetail of getCartDetails ; let index = index ">
+          <tr>
+            <th scope="row">{{index+1}}</th>
+            <td><img style="width: auto;height: 200px;"
+                src="http://localhost:3000/assets/produits/{{getCartDetail.image}}" alt="P1"></td>
+            <td> {{getCartDetail.price / getCartDetail.quantity | number}} DT </td>
+            <td> <button type="button" class="btn" (click)="increaseQuantity(getCartDetail._id)"><i
+                  class="fa fa-plus"></i></button>
+              <span>{{getCartDetail.quantity}}</span>
+              <button type="button" class="btn" (click)="decreaseQuantity(getCartDetail._id)"><i
+                  class="fa fa-minus"></i></button></td>
+            <td> {{getCartDetail.price}} DT</td>
+            <td><button type="button" class="delete" (click)="removeItem(getCartDetail._id)"><i
+                  class="fa fa-trash"></i></button></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+      <div class="col-md-6 text-right">
+        <button mat-raised-button  color='primary' (click)="onSubmit()">Submit</button>
+        <button mat-raised-button style="margin-left: 20px;" (click)="clearCart()" color='warn'>Remove All Item</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<h2>List Demande Devis</h2>
+
+<div  class="mat-elevation-z8 table " >
+  <mat-table [dataSource]="datasource" matSort>
+    <!--<ng-container matColumnDef="_id"  >
+          <mat-header-cell *matHeaderCellDef mat-sort-header> #id </mat-header-cell>
+          <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element._id}} </mat-cell>
+        </ng-container>-->
+    <ng-container matColumnDef="client">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 10px;"> Client </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element.client.name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="devis">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Devis </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.devis}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef style="margin-left: 70px;">Actions </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;">
+        <button mat-raised-button color="primary" (click)="details(element)">Details</button>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="loading">
+      <mat-footer-cell *matFooterCellDef colspan="6">
+        Loading data...
+      </mat-footer-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':datasource!=null}"></mat-footer-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[ 5, 10, 25, 100]" [pageSize]="10" showFirstLastButtons></mat-paginator>
+</div>

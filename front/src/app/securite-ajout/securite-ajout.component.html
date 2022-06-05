@@ -1,0 +1,74 @@
+<h2>Products List</h2>
+<form (submit)="onSubmit()" [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName='title'>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>description</mat-label>
+    <input matInput formControlName='description'>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>price</mat-label>
+    <input matInput formControlName='price'>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Category</mat-label>
+    <mat-select formControlName="category">
+      <mat-option *ngFor="let food of categories" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="form-group">
+    <input type="file"  (change)="onFilePicked($event)" >
+  </div>
+
+
+  <button mat-raised-button color="primary">Submit</button>
+</form>
+<div  class="mat-elevation-z8 table ">
+  <mat-table [dataSource]="datasource" matSort>
+    <!--<ng-container matColumnDef="_id"  >
+          <mat-header-cell *matHeaderCellDef mat-sort-header> #id </mat-header-cell>
+          <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element._id}} </mat-cell>
+        </ng-container>-->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 10px;"> Title </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element.title}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Description </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.description}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="image">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Image </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> <img src="http://localhost:3000/assets/produits/{{element.image}}" alt=""> </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="price">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Price </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.price}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="category">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Category </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.category}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef style="margin-left: 70px;">Actions </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;">
+        <button mat-raised-button color="warn" (click)="onDelete(element._id)">Delete</button>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="loading">
+      <mat-footer-cell *matFooterCellDef colspan="6">
+        Loading data...
+      </mat-footer-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':datasource!=null}"></mat-footer-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[ 5, 10, 25, 100]" [pageSize]="10" showFirstLastButtons></mat-paginator>
+</div>

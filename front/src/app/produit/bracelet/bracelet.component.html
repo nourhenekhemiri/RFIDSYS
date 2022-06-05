@@ -1,0 +1,39 @@
+<section id="pricing_area" class="section_padding section_gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-xs-12 text-center wow fadeIn" data-wow-delay=".1s">
+        <div class="section_title">
+          <h2>Cartes et portes cles</h2>
+          <div class="sec_divider"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div *ngFor="let item of produits" class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
+        <div class="pricingTable">
+          <div class="pricingTable-header">
+            <span><img style="width: 300px; height: 200px;" src="http://localhost:3000/assets/produits/{{item.image}}"></span>
+            <div class="heading">
+              <h3>{{item.category | uppercase}}</h3>
+            </div>
+          </div>
+          <div class="pricingContent">
+            <ul>
+              <li>{{item.title}}</li>
+              <li>{{item.description}}</li>
+              <li>{{item.price}} <b>TND</b>  </li>
+            </ul>
+          </div>
+          <div class="pricingTable-sign-up">
+            <a class="btn main_bg_btn" (click)="addToCart(item)">Ajouter Au panier</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

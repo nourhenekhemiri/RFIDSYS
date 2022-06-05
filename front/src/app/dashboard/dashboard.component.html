@@ -1,0 +1,49 @@
+
+<div style="width: 500px;margin-left: 32%;margin-top: 10%;">
+  <p-chart type="pie" [data]="data" [options]="chartOptions"  ></p-chart>
+</div>
+
+<div  class="mat-elevation-z8 table ">
+  <mat-table [dataSource]="datasource" matSort matSortActive="nb_achat" matSortDirection="desc">
+    <!--<ng-container matColumnDef="_id"  >
+          <mat-header-cell *matHeaderCellDef mat-sort-header> #id </mat-header-cell>
+          <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element._id}} </mat-cell>
+        </ng-container>-->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 10px;"> Title </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element.title}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Description </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.description}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="image">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Image </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> <img src="http://localhost:3000/assets/produits/{{element.image}}" alt=""> </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="price">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Price </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.price}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="category">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Category </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.category}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="nb_achat">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Nombre d'achat </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.nb_achat}} </mat-cell>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="loading">
+      <mat-footer-cell *matFooterCellDef colspan="6">
+        Loading data...
+      </mat-footer-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':datasource!=null}"></mat-footer-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[ 5, 10, 25, 100]" [pageSize]="10" showFirstLastButtons></mat-paginator>
+</div>

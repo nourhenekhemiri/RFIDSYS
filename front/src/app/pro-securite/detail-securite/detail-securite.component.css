@@ -1,0 +1,36 @@
+.content h4{
+    margin-top: 10px;
+}
+.btn{
+    background:#1E90FF;
+    border-radius: 50%;
+    font-size: 16px;
+    color:#fff;
+    margin:0 8px;
+}
+.content span{
+    font-weight: 800;
+    font-size: 18px;
+}
+.cart_btn{
+    border-radius:4px ;
+    background:#1E90FF ;
+    border:1px solid #1E90FF;
+    color:#fff;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top:20px;
+    border:none;
+    padding:4px 16px;
+    text-transform:uppercase;
+    transition:0.4s;
+}
+.cart_btn:hover{
+    color:#1E90FF;
+    background: transparent;
+    border:1px solid #1E90FF;
+}
+
+
+
+

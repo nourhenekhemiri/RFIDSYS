@@ -1,0 +1,64 @@
+[
+  
+    {
+    
+     "title": "Barière",
+      "type": "Controle daccee",
+     "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+      "image": "assets/images/person_2.jpg", 
+      "category": "produit",
+      "price" :"50dt"
+    },{
+    
+        "title": "Moteur porte battente",
+        "type": "Controle daccee",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"90dt"
+    },{
+  
+        "title": "Moteur porte industrielle",
+        "type": "Controle daccee",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"100dt"
+    },{
+        
+        "title": "Moteur porte coulissante",
+        "type": "Controle daccee",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"100dt"
+      
+    },
+    {
+      
+        "title": "Moteur porte garage",
+        "type": "Controle daccee",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"100dt"
+    },{
+        
+        "title": "SERRE CABLE ET PALETTE",
+        "type": "Tag de rfid",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"100dt"
+      
+    },
+    {
+        
+        "title": "TEXTILE ET EAS",
+        "type": "Tag de rfid",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"100dt"
+    }
+  ]

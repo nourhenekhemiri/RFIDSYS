@@ -1,0 +1,122 @@
+<nav class="main-men" *ngIf="currentUser ">
+  <ul>
+    <li>
+      <a routerLink="/">
+        <i class="fa fa-home fa-2x"></i>
+        <span class="nav-text">
+          Home
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a >
+        <i class="fa fa-user fa-2x" style="padding-left: 3px;"></i>
+        <span routerLink="/nav/user/profile" class="nav-text" style="padding-left: 3px;">
+          {{currentUser}}
+        </span>
+        <div (click)="logout()">
+          <i class="fa fa-power-off fa-2x"></i>
+          <span class="nav-text">
+          </span></div>
+      </a>
+      <a class="nav-link  "  aria-expanded="false"></a></li>
+      <li class="has-subnav">
+        <a routerLink="/nav/user/rdv">
+          <i class="fa fa-calendar fa-2x"></i>
+          <span class="nav-text">
+            RDV
+          </span>
+        </a>
+
+      </li>
+    <!-- <li class="has-subnav">
+      <a routerLink="/team">
+        <i class="fa fa-laptop fa-2x"></i>
+        <span class="nav-text">
+          Teams
+        </span>
+      </a>
+
+    </li>
+    <li>
+      <a routerLink="/agencyAdmin">
+        <i class="fa fa-users fa-2x"></i>
+        <span class="nav-text">
+          Agency Admin
+        </span>
+      </a>
+
+    </li>
+    <li>
+      <a routerLink="/securiteadd">
+        <i class="fa fa-folder-open fa-2x"></i>
+        <span class="nav-text">
+          Article_de_securite
+        </span>
+      </a>
+
+    </li>
+    <li>
+      <a routerLink="/cars">
+        <i class="fa fa-bar-chart-o fa-2x"></i>
+        <span class="nav-text">
+          Cars for sales
+        </span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/rdv-admin">
+        <i class="fa fa-list fa-2x"></i>
+        <span class="nav-text">
+          RDV-admin
+        </span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/rdv-buy">
+        <i class="fa fa-list fa-2x"></i>
+        <span class="nav-text">
+          RDV-Buy
+        </span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="#">
+        <i class="fa fa-cogs fa-2x"></i>
+        <span class="nav-text">
+          Parametre
+        </span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/streetmap">
+        <i class="fa fa-map-marker fa-2x"></i>
+        <span class="nav-text">
+          Street Map
+        </span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="#">
+        <i class="fa fa-bell fa-2x"></i>
+        <span class="nav-text">
+          Notification
+        </span>
+      </a>
+    </li> -->
+  </ul>
+
+  <!-- <ul >
+        <li>
+          <div  (click)="logout()">
+                 <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                   Logout
+                </span></div>
+        </li>
+    </ul> -->
+</nav>
+<div class="content" style="margin-left: 270px; margin-top: 106px !important;">
+<router-outlet></router-outlet>
+</div>

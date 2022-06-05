@@ -1,0 +1,38 @@
+<h2>RDV Accepter</h2>
+
+<div  class="mat-elevation-z8 table ">
+  <mat-table [dataSource]="datasource" matSort>
+    <!--<ng-container matColumnDef="_id"  >
+          <mat-header-cell *matHeaderCellDef mat-sort-header> #id </mat-header-cell>
+          <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element._id}} </mat-cell>
+        </ng-container>-->
+    <ng-container matColumnDef="Nom">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 10px;"> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="border-spacing: 25px;"> {{element.nom}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Email">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Email </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.email}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="date">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Date </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.date}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="type">
+      <mat-header-cell *matHeaderCellDef mat-sort-header style="margin-left: 70px;">Type </mat-header-cell>
+      <mat-cell *matCellDef="let element" style="margin-left: 30px;"> {{element.type}} </mat-cell>
+    </ng-container>
+
+
+
+    <ng-container matColumnDef="loading">
+      <mat-footer-cell *matFooterCellDef colspan="6">
+        Loading data...
+      </mat-footer-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':datasource!=null}"></mat-footer-row>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[ 5, 10, 25, 100]" [pageSize]="10" showFirstLastButtons></mat-paginator>
+</div>

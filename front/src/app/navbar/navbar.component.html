@@ -1,0 +1,117 @@
+<!-- Star Header Area -->
+<header id="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-3">
+        <!-- Logo Area -->
+        <div class="logo_area">
+          <a href="index.html"><img src="assets/img/log.png" alt="Log" /></a>
+        </div>
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Main Menu Area -->
+
+      <div class="menu-bar">
+        <nav id="main_menu">
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="nav" class="nav navbar-nav">
+              <li class="active"><a routerLink="/">Acceuil</a></li>
+              <li><a routerLink="/">A propos</a></li>
+
+              <li><a  routerLink="/nav/produit">Produits</a>
+                <div class="sub-menu-1">
+                  <ul>
+                    <li class="hover-me"><a >CONTRÔLE D'ACCÈS</a>
+                      <div class="sub-menu-2">
+                    <li><a >SERRE CABLE ET PALETTE</a></li>
+                    <li><a >TEXTILE ET EAS</a></li>
+                    <li><a >AGRICULTURE ET ELEVAGE</a></li>
+                    <li><a >ANTIMETAL</a></li>
+                    <li><a >STOCK ET INVENTAIRE</a></li>
+                </div>
+              </li>
+              <li class="hover-me"><a >Produit1</a>
+                <div class="sub-menu-2">
+              <li><a  routerLink="/produit1">Produit1</a></li>
+              <li><a >Produit1</a></li>
+              <li><a >Produit1</a></li>
+              <li><a >Produit1</a></li>
+
+          </div>
+          </li>
+
+          <li><a >Cartes et portes clés RFID</a></li>
+          <li><a >Etiquette RFID</a></li>
+          <li><a >Bracelets RFID</a></li>
+          <li><a >PDA et autres lecteurs mobiles RFID</a></li>
+          <li><a >Lecteurs fixe et antennes RFID</a></li>
+          <li><a >NFC</a></li>
+          <li><a >imprimante</a></li>
+
+          </ul>
+      </div>
+      </li>
+
+      <li><a routerLink="/nav/securite">Sécurité</a>
+        <div class="sub-menu-1">
+          <ul>
+            <li><a >Bloqueur de route et tueur de pneu</a></li>
+            <li><a >Cadenas intelligent</a></li>
+            <li><a >Détecteur de métal et x-ray</a></li>
+            <li><a >Vidéosurveillance</a></li>
+            <li class="hover-me"><a >Produit1</a>
+              <div class="sub-menu-2">
+            <li><a >Produit1</a></li>
+            <li><a >Produit1</a></li>
+            <li><a >Produit1</a></li>
+            <li><a >Produit1</a></li>
+
+        </div>
+      </li>
+
+
+      </ul>
+    </div>
+    </li>
+
+    <li><a href="#contact_area" routerLink="/nav/contact">Contact</a></li>
+    <li *ngIf="isAdmin"><a routerLink="/nav/admin/dashboard">Dashboard</a></li>
+    <li *ngIf="!isAdmin && isLoggedIn"><a routerLink="/nav/user/profile">Dashboard</a></li>
+    <li *ngIf="!isLoggedIn"><a routerLink="/auth/login">Login<i
+          class="fa-solid fa-bag-shopping"></i></a></li>
+
+    <div *ngIf="isLoggedIn && !isAdmin" class="cart_icon" routerLink="/nav/cart">
+      <i class="fa fa-shopping-cart"></i>
+      <div class="cart_value">
+        {{cartItemsCount }}
+      </div>
+
+
+    </div>
+
+
+
+    </ul>
+  </div>
+  </nav>
+  </div>
+
+  </div>
+  </div><!-- /.container-fluid -->
+</header>
+<!-- End header area -->
+
+<div class="main">
+  <router-outlet></router-outlet>
+</div>

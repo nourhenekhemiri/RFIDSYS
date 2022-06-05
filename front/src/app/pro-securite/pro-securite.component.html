@@ -1,0 +1,48 @@
+<!-- Start securite Area -->
+<html>
+
+<head>
+
+
+</head>
+<body>
+<section id="team_area" class="section_padding section_gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12 text-center wow
+fadeIn" data-wow-delay=".1s">
+                <div class="section_title">
+                    <br><br><br>
+                    <h2>Nos <span>Sécurité</span></h2>
+                    <div class="sec_divider"></div>
+                    <p>Découvrez l’ensemble de nos produits secusisés
+d’identification  <br>automatisés et traçabilité RFID.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-sm-6" *ngFor="let securite of securitesList">
+                <div class="our-team">
+                    <a href="/path/cadnat" >  <img [src]="'http://localhost:4200/assets/img/'+ securite.image" alt="Image"></a>
+                    <div class="team-content">
+                        <h3 class="title">  {{securite.title}}</h3>
+
+                        <ul class="social-links">
+                            <a href="/detail-securite"></a>
+
+
+                        </ul>
+                        <div class="d-flex action" class="content">
+                          <button routerLink="/pro-securite/{{ securite._id }}" class="btn btn-outline-primary"class="cart_btn" style=" background-color: #1E90FF;" >Details</button>&nbsp; &nbsp;
+
+                          </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    </body>
+    </html>
+    <!-- End securite Area -->

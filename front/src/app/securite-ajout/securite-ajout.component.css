@@ -1,0 +1,15 @@
+h2{
+  margin-left: 45%;
+  margin-top: 40px;
+}
+.table{
+  width: 70%;
+  margin: 5% auto;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin-left: 38%;
+}

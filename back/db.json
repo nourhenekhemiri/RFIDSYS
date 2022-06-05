@@ -1,0 +1,188 @@
+{
+  "Clients": [
+    {
+      "id": "1",
+      "name": "Alexandra Jae",
+      "mail": "alex.8@gmail.com",
+      "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+      "image": "images/person_2.jpg",
+      "city": "sousse",
+      "job": "Technicien"
+    },
+    {
+      "id": "2",
+      "name": " Same Die",
+      "mail": "same@gmail.com",
+      "description": "This agency does a fantastic job finding me the right coverage and insurance company at a very competitive price every time my insurance renews.",
+      "image": "images/person_3.jpg",
+      "city": "italie",
+      "job": "Assistance"
+    },
+    {
+      "id": "3",
+      "name": " Jihen Je",
+      "mail": "johen@gmail.com",
+      "description": "is the most helpful insurance agent I have ever dealt with. She is honest and up front with everything.This agency does a fantastic job.",
+      "image": "images/person_5.jpg",
+      "city": "tunis",
+      "job": " Developper"
+    },
+    {
+      "id": "4",
+      "name": "Jame Doe",
+      "mail": "jameJoe@gmail.com",
+      "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+      "image": "images/person_1.jpg",
+      "city": "France",
+      "job": "Ingenieur"
+    },
+    {
+      "id": "5",
+      "name": "Hamo Di",
+      "mail": "hamo@gmail.com",
+      "description": "Great local insurance company for personal and business related insurance. Get immediate insurance proof and easy payment options.",
+      "image": "images/person_1.jpg",
+      "city": "tunis",
+      "job ": " Developper Full Stack"
+    },
+    {
+      "id": "6",
+      "name": "Ahmed Ben ",
+      "mail": "ahmedBen@gmail.com",
+      "description": "This agency does a fantastic job finding me the right coverage and insurance company at a very competitive price every time my insurance renews.",
+      "image": "images/person_4.jpg",
+      "city": "France",
+      "job": "Technicien"
+    }
+  ],
+ 
+  "Securite": [
+    {
+      "id": "1",
+      "modele": "Hyundai Grand i10 Sedan",
+      "marque": "Hyundai Grand i10 Sedan",
+      "description": "La Hyundai i10 est une automobile du constructeur automobile coréen Hyundai produite depuis 2008. cest une citadine 5 portes, elle a remplacé la Hyundai Atos Prime en 2008 sur le marché européen, mais pas en Inde, où Atos Prime, appelée Santro, continue à être produite et coûte moins cher",
+      "image": "images/im2.jpg",
+     
+      "puissance": "150 ch ",
+      "price": 39.99
+    },
+    {
+      "id": "2",
+      "modele": "Golf 8",
+      "marque": "Golf 8",
+      "description": "La Golf VIII est une berline compacte qui est la 8e génération de Volkswagen Golf produite à plus de 35 millions exemplaires depuis 1974 par le constructeur automobile allemand Volkswagen, et commercialisée à partir de mars 2020. Elle succède à la Golf VII produite de 2012 à 2019.",
+      "image": "images/im3.jpg",
+     
+      "puissance": "150 ch ",
+      "price": 39.99
+    },
+    {
+      "id": "3",
+      "modele": "Polo 7",
+      "marque": "Polo 7",
+      "description": "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+      "image": "images/im10.jpg",
+    
+      "puissance": "150 ch ",
+      "price": 39.99
+    },
+    {
+      "id": "4",
+      "modele": "Polo 7",
+      "marque": "Polo 7",
+      "description": "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+      "image": "images/im4.jpg",
+    
+      "puissance": "150 ch ",
+      "price": 39.99
+    },
+    {
+      "id": "5",
+      "modele": "Polo 7",
+      "marque": "Polo 7",
+      "description": "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+      "image":"images/im9.jpg",
+     
+      "puissance": "150 ch ",
+      "price": 39.99
+    },
+    {
+      "id": "6",
+      "modele": "Polo 7",
+      "marque": "Polo 7",
+      "description": "La sixième génération de Volkswagen Polo est présentée le 16 juin 20171. Conçue par le designer allemand Klaus Bischoff, elle est dessinée par Marco Pavone dans le centre de design de Volkswagen.",
+      "image":"images/im9.jpg",
+   
+      "puissance": "150 ch ",
+      "price": 39.99
+    }
+  ],
+   
+"Produits":[
+  
+  
+    {
+    
+     "title": "Barière",
+      "type": "Controle daccee",
+     "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+      "image": "assets/images/person_2.jpg", 
+      "category": "produit",
+      "price" :"50dt"
+    },{
+    
+        "title": "Moteur porte battente",
+        "type": "Controle daccee",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"90dt"
+    },{
+  
+        "title": "Moteur porte industrielle",
+        "type": "Controle daccee",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"100dt"
+    },{
+        
+        "title": "Moteur porte coulissante",
+        "type": "Controle daccee",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"100dt"
+      
+    },
+    {
+      
+        "title": "Moteur porte garage",
+        "type": "Controle daccee",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"100dt"
+    },{
+        
+        "title": "SERRE CABLE ET PALETTE",
+        "type": "Tag de rfid",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"100dt"
+      
+    },
+    {
+        
+        "title": "TEXTILE ET EAS",
+        "type": "Tag de rfid",
+       "description": "is top notch. The customer service I receive is the best in the industry. I highly recommend them!,This agency does a fantastic job.",
+        "image": "assets/images/person_2.jpg", 
+        "category": "produit",
+        "price" :"100dt"
+    }
+  ]
+
+}

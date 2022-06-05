@@ -1,0 +1,24 @@
+
+  <div class="container">
+    <div class="card">
+      <div class="inner-box" id="card">
+        <div class="card-front">
+
+          <h2>REGISTER</h2>
+          <form [formGroup]="registerForm" (ngSubmit)="signupUser()">
+              <input type="text" formControlName="name" name="name" class="input-box" placeholder="your name" required>
+            <input type="email" formControlName="email" name="email" class="input-box" placeholder="your email id" required>
+            <input type="password" formControlName="password" name="password" class="input-box" placeholder="your password id" required>
+            <input type="password" formControlName="confirm_password" name="confirm_password" class="input-box" placeholder="confirm password" required>
+            <button type="submit" class="submit-btn">Submit</button>
+            <input type="checkbox"><span>Remember me</span>
+          </form>
+          <a routerLink="../login">
+          <button type="button" class="btn" >I ve an account</button></a>
+          <a href="">Forget password</a>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
