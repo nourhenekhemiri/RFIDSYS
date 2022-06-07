@@ -1,4 +1,4 @@
-const Securite = require('../models/Securite');
+const Securite = require('../models/securite');
 
 
 // get all 

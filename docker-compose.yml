@@ -27,15 +27,21 @@ services:
       ME_CONFIG_MONGODB_SERVER: database
     depends_on:
       - database
-
-  web:
-    build: .
-    image: realestate-angular
-    environment:
-      # Use the username and password found in the db-init.js file instead
-      # of the root username.
-      MONGODB_URI: mongodb://user:secretPassword@database/realestate
-    depends_on:
-      - database
-    ports:
-      - 8082:5000
+     
+  front:
+   build: ./front
+   ports:
+     - "4200:4200"
+   depends_on:
+     - back
+  back: 
+   build: ./back
+   ports:
+     - "3000:3000"
+   environment:
+     - MONGODB_URI='mongodb://localhost:27017/final-project'
+   links:
+     - database
+   depends_on:
+     - database
+  
